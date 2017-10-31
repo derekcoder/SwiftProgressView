@@ -19,6 +19,7 @@
 		E3D467EF1FA85F94001E0E1A /* SwiftProgressView.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E3D467C61FA85E28001E0E1A /* SwiftProgressView.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E3D467F41FA862E1001E0E1A /* RingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D467F31FA862E1001E0E1A /* RingViewController.swift */; };
 		E3D467F71FA8687C001E0E1A /* PieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D467F61FA8687C001E0E1A /* PieViewController.swift */; };
+		E3D467F91FA86D96001E0E1A /* SwiftProgressView.podspec in Resources */ = {isa = PBXBuildFile; fileRef = E3D467F81FA86D96001E0E1A /* SwiftProgressView.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		E3D467EA1FA85F50001E0E1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3D467F31FA862E1001E0E1A /* RingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingViewController.swift; sourceTree = "<group>"; };
 		E3D467F61FA8687C001E0E1A /* PieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieViewController.swift; sourceTree = "<group>"; };
+		E3D467F81FA86D96001E0E1A /* SwiftProgressView.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = SwiftProgressView.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 		E3D467BC1FA85E28001E0E1A = {
 			isa = PBXGroup;
 			children = (
+				E3D467F81FA86D96001E0E1A /* SwiftProgressView.podspec */,
 				E3D467C81FA85E28001E0E1A /* SwiftProgressView */,
 				E3D467DD1FA85F4F001E0E1A /* SwiftProgressViewDemo */,
 				E3D467C71FA85E28001E0E1A /* Products */,
@@ -246,6 +249,7 @@
 			files = (
 				E3D467E91FA85F50001E0E1A /* LaunchScreen.storyboard in Resources */,
 				E3D467E61FA85F50001E0E1A /* Assets.xcassets in Resources */,
+				E3D467F91FA86D96001E0E1A /* SwiftProgressView.podspec in Resources */,
 				E3D467E41FA85F50001E0E1A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +433,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SwiftProgressView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.derekcoder.SwiftProgressView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -452,6 +457,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = SwiftProgressView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.derekcoder.SwiftProgressView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
@@ -469,6 +475,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73DV6R4Q82;
 				INFOPLIST_FILE = SwiftProgressViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.derekcoder.SwiftProgressViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -485,6 +492,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 73DV6R4Q82;
 				INFOPLIST_FILE = SwiftProgressViewDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.derekcoder.SwiftProgressViewDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";

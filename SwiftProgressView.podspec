@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
 
   s.name         = "SwiftProgressView"
-  s.version      = "0.1.0"
-  s.summary      = "Ring and pie progress view written in Swift"
+  s.version      = "0.2.0"
+  s.summary      = "A set of progress views written in Swift"
 
   s.description  = <<-DESC
                    SwiftProgressView is a set of progress views written in Swift. It contains ring and pie style.

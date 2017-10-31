@@ -46,6 +46,13 @@ public class ProgressRingView: ProgressView {
         }
     }
     
+    public var progressLineCapStyle: CGLineCap = .butt {
+        didSet {
+            backgroundLayer.lineCap = self.lineCap(from: progressLineCapStyle)
+            setNeedsDisplay()
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -70,9 +77,17 @@ public class ProgressRingView: ProgressView {
         progressLayer.fillColor = nil
         progressLayer.strokeColor = progressColor.cgColor
         progressLayer.backgroundColor = UIColor.clear.cgColor
-        progressLayer.lineCap = kCALineCapRound
+        progressLayer.lineCap = self.lineCap(from: progressLineCapStyle)
         progressLayer.lineWidth = progressLineWidth
         layer.addSublayer(progressLayer)
+    }
+    
+    private func lineCap(from capStyle: CGLineCap) -> String {
+        switch capStyle {
+        case .butt: return kCALineCapButt
+        case .round: return kCALineCapRound
+        case .square: return kCALineCapSquare
+        }
     }
     
     // MARK: - Public
@@ -144,7 +159,7 @@ public class ProgressRingView: ProgressView {
         let radius = (bounds.size.width / 2.0) - circleLineWidth - (progressLineWidth / 2.0)
         
         let path = UIBezierPath()
-        path.lineCapStyle = .round
+        path.lineCapStyle = progressLineCapStyle
         path.lineWidth = progressLineWidth
         path.addArc(withCenter: centerPoint, radius: radius, startAngle: start, endAngle: end, clockwise: true)
         

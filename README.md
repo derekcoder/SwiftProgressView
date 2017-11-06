@@ -27,7 +27,7 @@ pod 'SwiftProgressView'
 
 ```swift
 let frame = CGRect(x: 100, y: 100, width: 100, height: 100)
-let progressView = ProgressRingView(frame: frame)
+let progressView = ProgressPieView(frame: frame)
 view.addSubview(progressView)
 progressView.setProgress(1.0, animated: true)
 ```

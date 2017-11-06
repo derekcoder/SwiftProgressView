@@ -12,6 +12,18 @@ import SwiftProgressView
 class RingViewController: UIViewController {
 
     @IBOutlet weak var progressView: ProgressRingView!
+    @IBOutlet weak var progressSlider: UISlider!
+    
+    @IBAction func animate(_ sender: UIButton) {
+        var progress: CGFloat = progressView.progress
+        if progress == 1.0 {
+            progress = 0.0
+        } else {
+            progress = 1.0
+        }
+        progressView.setProgress(progress, animated: true)
+        progressSlider.setValue(Float(progress), animated: true)
+    }
     
     @IBAction func progressChanged(_ sender: UISlider) {
         progressView.setProgress(CGFloat(sender.value), animated: false)

@@ -6,6 +6,8 @@
 
 A set of progress views written in Swift.
 
+<img src="https://github.com/derekcoder/SwiftProgressView/blob/master/SwiftProgressViewDemo/demo.gif">
+
 ## Requirements
 
 - iOS 10.0+

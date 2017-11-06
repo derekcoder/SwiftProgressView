@@ -26,6 +26,8 @@ pod 'SwiftProgressView'
 ### Programmatically
 
 ```swift
+import SwiftProgressView
+
 let frame = CGRect(x: 100, y: 100, width: 100, height: 100)
 let progressView = ProgressPieView(frame: frame)
 view.addSubview(progressView)

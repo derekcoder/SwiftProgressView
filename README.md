@@ -45,6 +45,7 @@ progressView.setProgress(1.0, animated: true)
 
 ## Contact
 
+- [Blog](http://blog.derekcoder.com)
 - [Twitter](https://twitter.com/derekcoder_)
 - [Weibo](https://weibo.com/u/6155322764)
 - Email: derekcoder@gmail.com

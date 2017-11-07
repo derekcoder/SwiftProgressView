@@ -22,8 +22,9 @@ pod 'SwiftProgressView'
 ```
 ## Contact
 
-Follow and contact me on [Twitter](https://twitter.com/derekcoder_). If you find an issue, just [open a ticket](https://github.com/derekcoder/SwiftProgressView/issues/new). Pull requests are warmly welcome as well.
-
+- [Twitter](https://twitter.com/derekcoder_)
+- [Weibo](https://weibo.com/u/6155322764)
+- Email: derekcoder@gmail.com
 ## License
 
 SwiftDevHints is released under the MIT license. [See LICENSE](https://github.com/derekcoder/SwiftProgressView/blob/master/LICENSE) for details.

@@ -48,6 +48,7 @@ progressView.setProgress(1.0, animated: true)
 - [Twitter](https://twitter.com/derekcoder_)
 - [Weibo](https://weibo.com/u/6155322764)
 - Email: derekcoder@gmail.com
+
 ## License
 
 SwiftDevHints is released under the MIT license. [See LICENSE](https://github.com/derekcoder/SwiftProgressView/blob/master/LICENSE) for details.

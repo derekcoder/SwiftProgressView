@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65BA15891FB0A6C400C752E7 /* setclass.png in Resources */ = {isa = PBXBuildFile; fileRef = 65BA15881FB0A6C400C752E7 /* setclass.png */; };
+		65BA158B1FB0A6C900C752E7 /* attributes.png in Resources */ = {isa = PBXBuildFile; fileRef = 65BA158A1FB0A6C900C752E7 /* attributes.png */; };
 		E3BC7CBA1FB060850068F657 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = E3BC7CB91FB060830068F657 /* demo.gif */; };
 		E3D467CB1FA85E28001E0E1A /* SwiftProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = E3D467C91FA85E28001E0E1A /* SwiftProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E3D467D41FA85E9E001E0E1A /* ProgressPieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D467D11FA85E9E001E0E1A /* ProgressPieView.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		65BA15881FB0A6C400C752E7 /* setclass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setclass.png; sourceTree = "<group>"; };
+		65BA158A1FB0A6C900C752E7 /* attributes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attributes.png; sourceTree = "<group>"; };
 		E3BC7CB91FB060830068F657 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 		E3D467C61FA85E28001E0E1A /* SwiftProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D467C91FA85E28001E0E1A /* SwiftProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftProgressView.h; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 		E3D467F51FA862E6001E0E1A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				65BA158A1FB0A6C900C752E7 /* attributes.png */,
+				65BA15881FB0A6C400C752E7 /* setclass.png */,
 				E3BC7CB91FB060830068F657 /* demo.gif */,
 				E3D467EA1FA85F50001E0E1A /* Info.plist */,
 				E3D467DE1FA85F4F001E0E1A /* AppDelegate.swift */,
@@ -253,9 +259,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65BA158B1FB0A6C900C752E7 /* attributes.png in Resources */,
 				E3D467E91FA85F50001E0E1A /* LaunchScreen.storyboard in Resources */,
 				E3BC7CBA1FB060850068F657 /* demo.gif in Resources */,
 				E3D467E61FA85F50001E0E1A /* Assets.xcassets in Resources */,
+				65BA15891FB0A6C400C752E7 /* setclass.png in Resources */,
 				E3D468251FA878D7001E0E1A /* README.md in Resources */,
 				E3D467F91FA86D96001E0E1A /* SwiftProgressView.podspec in Resources */,
 				E3D467E41FA85F50001E0E1A /* Main.storyboard in Resources */,

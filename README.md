@@ -52,4 +52,4 @@ progressView.setProgress(1.0, animated: true)
 
 ## License
 
-SwiftDevHints is released under the MIT license. [See LICENSE](https://github.com/derekcoder/SwiftProgressView/blob/master/LICENSE) for details.
+SwiftProgressView is released under the MIT license. [See LICENSE](https://github.com/derekcoder/SwiftProgressView/blob/master/LICENSE) for details.

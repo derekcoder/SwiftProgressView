@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let kDefaultBlueColor = UIColor(red: 5/255.0, green: 117/255.0, blue: 255/255.0, alpha: 1.0)
+let kDefaultBlueColor = UIColor(red: 5/255.0, green: 117/255.0, blue: 255/255.0, alpha: 1.0)
 
 @IBDesignable
 public class ProgressView: UIView {

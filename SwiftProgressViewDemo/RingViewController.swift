@@ -49,7 +49,7 @@ class RingViewController: UIViewController {
         progressView.progressColor = sender.backgroundColor!
     }
     
-    @IBAction func changeTextColor(_ sender: UIButton) {
+    @IBAction func changePercentageColor(_ sender: UIButton) {
         progressView.percentageColor = sender.backgroundColor!
     }
 }

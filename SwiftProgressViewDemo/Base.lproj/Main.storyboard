@@ -85,7 +85,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3K8-C7-yCc" customClass="ProgressRingView" customModule="SwiftProgressView">
-                                <rect key="frame" x="97" y="90" width="180" height="180"/>
+                                <rect key="frame" x="97.5" y="90" width="180" height="180"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="UUW-dW-fYR"/>
@@ -254,8 +254,8 @@
                                     <action selector="changeProgressColor:" destination="rgB-1X-Ok0" eventType="touchUpInside" id="Lq0-tU-7M0"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Text Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogs-mI-uZn">
-                                <rect key="frame" x="16" y="613" width="78" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Percentage Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogs-mI-uZn">
+                                <rect key="frame" x="16" y="613" width="133" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -268,7 +268,7 @@
                                     <constraint firstAttribute="width" secondItem="Ogr-Wh-VuF" secondAttribute="height" multiplier="1:1" id="rbS-ma-iMI"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="changeTextColor:" destination="rgB-1X-Ok0" eventType="touchUpInside" id="UP2-hL-jdc"/>
+                                    <action selector="changePercentageColor:" destination="rgB-1X-Ok0" eventType="touchUpInside" id="UP2-hL-jdc"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="auy-bt-4bp">
@@ -279,7 +279,7 @@
                                     <constraint firstAttribute="width" secondItem="auy-bt-4bp" secondAttribute="height" multiplier="1:1" id="oeE-kJ-7A0"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="changeTextColor:" destination="rgB-1X-Ok0" eventType="touchUpInside" id="zfN-Or-A49"/>
+                                    <action selector="changePercentageColor:" destination="rgB-1X-Ok0" eventType="touchUpInside" id="zfN-Or-A49"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Mw-82-9wl">
@@ -290,7 +290,7 @@
                                     <constraint firstAttribute="width" constant="30" id="wlY-ul-ax9"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="changeTextColor:" destination="rgB-1X-Ok0" eventType="touchUpInside" id="WCd-mz-trb"/>
+                                    <action selector="changePercentageColor:" destination="rgB-1X-Ok0" eventType="touchUpInside" id="WCd-mz-trb"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IEf-uc-qMe">
@@ -301,11 +301,11 @@
                                     <constraint firstAttribute="width" secondItem="IEf-uc-qMe" secondAttribute="height" multiplier="1:1" id="rth-um-zmk"/>
                                 </constraints>
                                 <connections>
-                                    <action selector="changeTextColor:" destination="rgB-1X-Ok0" eventType="touchUpInside" id="FYf-GX-CjH"/>
+                                    <action selector="changePercentageColor:" destination="rgB-1X-Ok0" eventType="touchUpInside" id="FYf-GX-CjH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbh-AM-HQm">
-                                <rect key="frame" x="159" y="300" width="57" height="30"/>
+                                <rect key="frame" x="159.5" y="300" width="57" height="30"/>
                                 <state key="normal" title="Animate"/>
                                 <connections>
                                     <action selector="animate:" destination="rgB-1X-Ok0" eventType="touchUpInside" id="WCm-dl-Lsh"/>
@@ -557,7 +557,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ue0-5C-Xe2" customClass="ProgressPieView" customModule="SwiftProgressView">
-                                <rect key="frame" x="87" y="90" width="200" height="200"/>
+                                <rect key="frame" x="87.5" y="90" width="200" height="200"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Ue0-5C-Xe2" secondAttribute="height" multiplier="1:1" id="15i-oB-78a"/>
@@ -573,7 +573,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wc-8f-42r">
-                                <rect key="frame" x="159" y="340" width="57" height="30"/>
+                                <rect key="frame" x="159.5" y="340" width="57" height="30"/>
                                 <state key="normal" title="Animate"/>
                                 <connections>
                                     <action selector="animate:" destination="PGY-En-uHV" eventType="touchUpInside" id="k5H-ft-t7b"/>

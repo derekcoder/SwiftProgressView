@@ -25,6 +25,10 @@ class RingViewController: UIViewController {
         progressSlider.setValue(Float(progress), animated: true)
     }
     
+    @IBAction func showPercentageChanged(_ sender: UISwitch) {
+    	progressView.isShowPercentage = sender.isOn
+    }
+    
     @IBAction func progressChanged(_ sender: UISlider) {
         progressView.setProgress(CGFloat(sender.value), animated: false)
     }
@@ -43,5 +47,9 @@ class RingViewController: UIViewController {
     
     @IBAction func changeProgressColor(_ sender: UIButton) {
         progressView.progressColor = sender.backgroundColor!
+    }
+    
+    @IBAction func changeTextColor(_ sender: UIButton) {
+        progressView.percentageColor = sender.backgroundColor!
     }
 }

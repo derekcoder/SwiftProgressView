@@ -53,9 +53,9 @@ public class ProgressRingView: ProgressView {
         }
     }
     
-    @IBInspectable public var isShowText: Bool = true { didSet { setNeedsDisplay() } }
-    @IBInspectable public var textFontSize: CGFloat = 15 { didSet { setNeedsDisplay() } }
-    @IBInspectable public var textFontColor: UIColor = kDefaultBlueColor { didSet { setNeedsDisplay() } }
+    @IBInspectable public var isShowPercentage: Bool = true { didSet { setNeedsDisplay() } }
+    @IBInspectable public var percentageFontSize: CGFloat = 15 { didSet { setNeedsDisplay() } }
+    @IBInspectable public var percentageColor: UIColor = kDefaultBlueColor { didSet { setNeedsDisplay() } }
 
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -142,7 +142,10 @@ public class ProgressRingView: ProgressView {
     override public func draw(_ rect: CGRect) {
         drawBackground()
         drawProgress()
-        drawText()
+        
+        if isShowPercentage {
+            drawText()
+        }
     }
     
     private func drawBackground() {
@@ -174,37 +177,59 @@ public class ProgressRingView: ProgressView {
     private var percentageSymbolAttributes: [NSAttributedStringKey : Any] {
         let paragraphStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         paragraphStyle.alignment = .left
-        let font = UIFont.systemFont(ofSize: textFontSize)
-        let attributes: [NSAttributedStringKey : Any] = [.font: font, .foregroundColor: textFontColor, .paragraphStyle: paragraphStyle]
+        let font = UIFont.systemFont(ofSize: percentageFontSize)
+        let attributes: [NSAttributedStringKey : Any] = [.font: font, .foregroundColor: percentageColor, .paragraphStyle: paragraphStyle]
         return attributes
     }
     
     private var percentageTextAttributes: [NSAttributedStringKey : Any] {
         let paragraphStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         paragraphStyle.alignment = .right
-        let font = UIFont.systemFont(ofSize: textFontSize)
-        let attributes: [NSAttributedStringKey : Any] = [.font: font, .foregroundColor: textFontColor, .paragraphStyle: paragraphStyle]
+        let font = UIFont.systemFont(ofSize: percentageFontSize)
+        let attributes: [NSAttributedStringKey : Any] = [.font: font, .foregroundColor: percentageColor, .paragraphStyle: paragraphStyle]
         return attributes
     }
     
+    private var delta: CGFloat {
+        let text = self.text
+        let estimateDigitWidth = (percentageFontSize + 3) / 2
+        switch text.count {
+        case 1: return 0
+        case 2: return estimateDigitWidth / 2
+        case 3: return estimateDigitWidth
+        default: return 0
+        }
+    }
+    
+    private var text: String {
+        return "\(Int(round(Double(progress * 100))))"
+    }
+    
     private func drawText() {
-        let text = "\(Int(round(Double(progress * 100))))"
+        drawPercentageText()
+        drawPercentageSymbol()
+    }
+    
+    private func drawPercentageText() {
         let textAttributes = self.percentageTextAttributes
-        let maxRect = CGRect(x: 0, y: 0, width: bounds.size.width/2.0, height: bounds.size.height)
-        let textRect = text.boundingRect(with: maxRect.size, options: .usesLineFragmentOrigin, attributes: textAttributes, context: nil)
-        let textDrawRect = CGRect(x: maxRect.minX,
-                            	  y: maxRect.minY + (maxRect.height - textRect.height) * 0.5,
-                            	width: maxRect.width,
-                             	 height: textRect.height)
+        let maxTextRect = CGRect(x: 0, y: 0, width: bounds.size.width/2.0 + delta, height: bounds.size.height)
+        let textRect = text.boundingRect(with: maxTextRect.size, options: .usesLineFragmentOrigin, attributes: textAttributes, context: nil)
+        let textDrawRect = CGRect(x: maxTextRect.minX,
+                                  y: maxTextRect.minY + (maxTextRect.height - textRect.height) * 0.5,
+                                  width: maxTextRect.width,
+                                  height: textRect.height)
         text.draw(in: textDrawRect, withAttributes: textAttributes)
-        
+    }
+    
+    private func drawPercentageSymbol() {
         let symbol = "%" as NSString
         let symbolAttributes = self.percentageSymbolAttributes
-        let symbolRect = symbol.boundingRect(with: maxRect.size, options: .usesLineFragmentOrigin, attributes: symbolAttributes, context: nil)
-        let symbolDrawRect = CGRect(x: maxRect.minX + maxRect.width,
-                                  	y: maxRect.minY + (maxRect.height - symbolRect.height) * 0.5,
-                                 	 width: maxRect.width,
-                                 	 height: symbolRect.height)
+        let maxSymbolRect = CGRect(x: bounds.size.width/2.0 + delta, y: 0, width: bounds.size.width/2.0 - delta, height: bounds.size.height)
+        let symbolRect = symbol.boundingRect(with: maxSymbolRect.size, options: .usesLineFragmentOrigin, attributes: symbolAttributes, context: nil)
+        let symbolDrawRect = CGRect(x: maxSymbolRect.minX,
+                                    y: maxSymbolRect.minY + (maxSymbolRect.height - symbolRect.height) * 0.5,
+                                    width: maxSymbolRect.width,
+                                    height: symbolRect.height)
         symbol.draw(in: symbolDrawRect, withAttributes: symbolAttributes)
     }
 }

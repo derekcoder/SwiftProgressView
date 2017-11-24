@@ -40,6 +40,8 @@ public class ProgressPieView: ProgressView {
         }
     }
     
+    @IBInspectable public var spacing: CGFloat = 0.0 { didSet { setNeedsDisplay() } }
+    
     override public init(frame: CGRect) {
         super.init(frame: frame)
         setup()
@@ -133,7 +135,7 @@ public class ProgressPieView: ProgressView {
     private func drawProgress() {
         let start = -CGFloat.pi / 2.0
         let end = start + (2.0 * CGFloat.pi * progress)
-        let radius = (bounds.size.width / 2.0) - circleLineWidth
+        let radius = (bounds.size.width / 2.0) - circleLineWidth - spacing
         
         let path = UIBezierPath()
         path.move(to: centerPoint)

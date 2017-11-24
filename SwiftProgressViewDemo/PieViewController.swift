@@ -33,6 +33,10 @@ class PieViewController: UIViewController {
         progressView.circleLineWidth = CGFloat(sender.value)
     }
     
+    @IBAction func spacingChanged(_ sender: UISlider) {
+        progressView.spacing = CGFloat(sender.value)
+    }
+    
     @IBAction func changeCircleColor(_ sender: UIButton) {
         progressView.circleColor = sender.backgroundColor!
     }

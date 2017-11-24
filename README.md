@@ -6,7 +6,7 @@
 
 A set of progress views written in Swift.
 
-<img src="https://github.com/derekcoder/SwiftProgressView/blob/master/SwiftProgressViewDemo/demo.gif">
+<img src="https://github.com/derekcoder/SwiftProgressView/blob/master/SwiftProgressViewDemo/ring_demo.gif"> <img src="https://github.com/derekcoder/SwiftProgressView/blob/master/SwiftProgressViewDemo/pie_demo.gif">
 
 ## Requirements
 

@@ -17,8 +17,14 @@ A set of progress views written in Swift.
 
 ### CocoaPods
 
-```ruby
+```
 pod 'SwiftProgressView'
+```
+
+### Carthage
+
+```
+github "DerekCoder/SwiftProgressView"
 ```
 
 ## Usage

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		65BA15891FB0A6C400C752E7 /* setclass.png in Resources */ = {isa = PBXBuildFile; fileRef = 65BA15881FB0A6C400C752E7 /* setclass.png */; };
 		65BA158B1FB0A6C900C752E7 /* attributes.png in Resources */ = {isa = PBXBuildFile; fileRef = 65BA158A1FB0A6C900C752E7 /* attributes.png */; };
+		E35345501FCD42A900B21A4C /* CHANGELOG.md in Resources */ = {isa = PBXBuildFile; fileRef = E353454F1FCD42A900B21A4C /* CHANGELOG.md */; };
 		E3BC7CBA1FB060850068F657 /* demo.gif in Resources */ = {isa = PBXBuildFile; fileRef = E3BC7CB91FB060830068F657 /* demo.gif */; };
 		E3D467CB1FA85E28001E0E1A /* SwiftProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = E3D467C91FA85E28001E0E1A /* SwiftProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E3D467D41FA85E9E001E0E1A /* ProgressPieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3D467D11FA85E9E001E0E1A /* ProgressPieView.swift */; };
@@ -55,6 +56,7 @@
 /* Begin PBXFileReference section */
 		65BA15881FB0A6C400C752E7 /* setclass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setclass.png; sourceTree = "<group>"; };
 		65BA158A1FB0A6C900C752E7 /* attributes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = attributes.png; sourceTree = "<group>"; };
+		E353454F1FCD42A900B21A4C /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
 		E3BC7CB91FB060830068F657 /* demo.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = demo.gif; sourceTree = "<group>"; };
 		E3D467C61FA85E28001E0E1A /* SwiftProgressView.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SwiftProgressView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3D467C91FA85E28001E0E1A /* SwiftProgressView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SwiftProgressView.h; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 		E3D467BC1FA85E28001E0E1A = {
 			isa = PBXGroup;
 			children = (
+				E353454F1FCD42A900B21A4C /* CHANGELOG.md */,
 				E3D468241FA878D7001E0E1A /* README.md */,
 				E3D467F81FA86D96001E0E1A /* SwiftProgressView.podspec */,
 				E3D467C81FA85E28001E0E1A /* SwiftProgressView */,
@@ -258,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E35345501FCD42A900B21A4C /* CHANGELOG.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,7 +16,6 @@ public class ProgressRingView: ProgressView {
     private var animationStartTime: CFTimeInterval = 0
     
     private var progressLayer: CAShapeLayer!
-    private var backgroundLayer: CAShapeLayer!
     
     override public var progressColor: UIColor {
         didSet {
@@ -25,30 +24,16 @@ public class ProgressRingView: ProgressView {
         }
     }
     
-    override public var circleColor: UIColor {
-        didSet {
-            backgroundLayer.strokeColor = circleColor.cgColor
-            setNeedsDisplay()
-        }
-    }
-    
-    public override var progressLineWidth: CGFloat {
-        didSet {
-            progressLayer.lineWidth = progressLineWidth
-            setNeedsDisplay()
-        }
-    }
-    
-    public override var circleLineWidth: CGFloat {
-        didSet {
-            backgroundLayer.lineWidth = circleLineWidth
-            setNeedsDisplay()
-        }
-    }
-    
     public var progressLineCapStyle: CGLineCap = .butt {
         didSet {
             backgroundLayer.lineCap = self.lineCap(from: progressLineCapStyle)
+            setNeedsDisplay()
+        }
+    }
+    
+    @IBInspectable public var progressLineWidth: CGFloat = 3 {
+        didSet {
+            progressLayer.lineWidth = progressLineWidth
             setNeedsDisplay()
         }
     }
@@ -132,13 +117,6 @@ public class ProgressRingView: ProgressView {
     }
     
     // MARK: - Drawing
-    private var centerPoint: CGPoint {
-        var center: CGPoint = .zero
-        center.x = (bounds.size.width - bounds.origin.x) / 2
-        center.y = (bounds.size.height - bounds.origin.y) / 2
-        return center
-    }
-    
     override public func draw(_ rect: CGRect) {
         drawBackground()
         drawProgress()
@@ -147,20 +125,7 @@ public class ProgressRingView: ProgressView {
             drawText()
         }
     }
-    
-    private func drawBackground() {
-        let start = -CGFloat.pi / 2.0
-        let end = start + (2.0 * CGFloat.pi)
-        let radius = (bounds.size.width - circleLineWidth) / 2
         
-        let path = UIBezierPath()
-        path.lineWidth = circleLineWidth
-        path.lineCapStyle = .round
-        path.addArc(withCenter: centerPoint, radius: radius, startAngle: start, endAngle: end, clockwise: true)
-        
-        backgroundLayer.path = path.cgPath
-    }
-    
     private func drawProgress() {
         let start = -CGFloat.pi / 2.0
         let end = start + (2.0 * CGFloat.pi * progress)

@@ -48,6 +48,19 @@ progressView.setProgress(1.0, animated: true)
 - Change attributes
 <img src="https://github.com/derekcoder/SwiftProgressView/blob/master/SwiftProgressViewDemo/attributes.png">
 
+## Attributes & Methods
+
+* progress - 0.0 ~ 1.0, readonly. Support IBInspectable
+* circleLineWidth -  The width of outer circle. Support IBInspectable
+* circleColor - The color of outer circle. Support IBInspectable
+* progressColor - The color of inner circle. Support IBInspectable
+* animationDuration - The duration of animation. Support IBInspectable
+* progressLineWidth - The width of inner circle, only for ProgressRingView. Support IBInspectable
+* isShowPercentage - Indicate whether percentage lable is displayed or not, only for ProgressRingView. Support IBInspectable
+* percentageFontSize - The font size of percentage label, only for ProgressRingView. Support IBInspectable
+* percentageColor - The color of percentage label, only for ProgressRingView. Support IBInspectable
+* spacing - The spacing of outer and inner circle, only for ProgressPieView. Support IBInspectable
+* setProgress(_ progress: CGFloat, animated: Bool) - The method to change progress with animation or not.
 
 ## Contact
 

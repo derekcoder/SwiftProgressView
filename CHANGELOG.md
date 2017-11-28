@@ -2,6 +2,12 @@
 
 -----
 
+## [1.2.1 - Refactor](https://github.com/derekcoder/SwiftProgressView/releases/1.2.0) (2017-11-27)
+
+#### Fix
+* Make progress property set access level to internal
+
+-----
 ## [1.2.0 - Carthage Support](https://github.com/derekcoder/SwiftProgressView/releases/1.2.0) (2017-11-27)
 
 #### Add

@@ -48,19 +48,21 @@ progressView.setProgress(1.0, animated: true)
 - Change attributes
 <img src="https://github.com/derekcoder/SwiftProgressView/blob/master/SwiftProgressViewDemo/attributes.png">
 
-## Attributes & Methods
+## Classes & Attributes & Methods
 
-* progress - 0.0 ~ 1.0, readonly. Support IBInspectable
-* circleLineWidth -  The width of outer circle. Support IBInspectable
-* circleColor - The color of outer circle. Support IBInspectable
-* progressColor - The color of inner circle. Support IBInspectable
-* animationDuration - The duration of animation. Support IBInspectable
-* progressLineWidth - The width of inner circle, only for ProgressRingView. Support IBInspectable
-* isShowPercentage - Indicate whether percentage lable is displayed or not, only for ProgressRingView. Support IBInspectable
-* percentageFontSize - The font size of percentage label, only for ProgressRingView. Support IBInspectable
-* percentageColor - The color of percentage label, only for ProgressRingView. Support IBInspectable
-* spacing - The spacing of outer and inner circle, only for ProgressPieView. Support IBInspectable
-* setProgress(_ progress: CGFloat, animated: Bool) - The method to change progress with animation or not.
+* `ProgressRingView` - The class for ring progress view
+* `ProgressViewPieView` - The class for pie progress view
+* `progress` - 0.0 ~ 1.0, readonly. Support IBInspectable
+* `circleLineWidth` -  The width of outer circle. Support IBInspectable
+* `circleColor` - The color of outer circle. Support IBInspectable
+* `progressColor` - The color of inner circle. Support IBInspectable
+* `animationDuration` - The duration of animation. Support IBInspectable
+* `progressLineWidth` - The width of inner circle, only for ProgressRingView. Support IBInspectable
+* `isShowPercentage` - Indicate whether percentage lable is displayed or not, only for ProgressRingView. Support IBInspectable
+* `percentageFontSize` - The font size of percentage label, only for ProgressRingView. Support IBInspectable
+* `percentageColor` - The color of percentage label, only for ProgressRingView. Support IBInspectable
+* `spacing` - The spacing of outer and inner circle, only for ProgressPieView. Support IBInspectable
+* `setProgress(_ progress: CGFloat, animated: Bool)` - The method to change progress with animation or not.
 
 ## Contact
 

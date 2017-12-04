@@ -42,10 +42,10 @@ progressView.setProgress(1.0, animated: true)
 
 ### IB (storyboard)
 
-- Set Class
+- Drag UIView & Set Class
 <img src="https://github.com/derekcoder/SwiftProgressView/blob/master/SwiftProgressViewDemo/setclass.png">
 
-- Change attributes
+- Change Attributes
 <img src="https://github.com/derekcoder/SwiftProgressView/blob/master/SwiftProgressViewDemo/attributes.png">
 
 ## Classes & Attributes & Methods

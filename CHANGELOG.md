@@ -2,6 +2,13 @@
 
 -----
 
+## [1.2.2 - Bug Fixes](https://github.com/derekcoder/SwiftProgressView/releases/tag/1.2.2) (2017-12-09)
+
+#### Fix
+* Change progress layer fill color to clear color for ring progress view.
+
+-----
+
 ## [1.2.1 - Refactor](https://github.com/derekcoder/SwiftProgressView/releases/tag/1.2.1) (2017-11-28)
 
 #### Fix

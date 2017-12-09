@@ -63,7 +63,7 @@ public class ProgressRingView: ProgressView {
         layer.addSublayer(backgroundLayer)
         
         progressLayer = CAShapeLayer()
-        progressLayer.fillColor = nil
+        progressLayer.fillColor = UIColor.clear.cgColor
         progressLayer.strokeColor = progressColor.cgColor
         progressLayer.backgroundColor = UIColor.clear.cgColor
         progressLayer.lineCap = self.lineCap(from: progressLineCapStyle)

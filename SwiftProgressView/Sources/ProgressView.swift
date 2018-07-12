@@ -18,7 +18,7 @@ public class ProgressView: UIView {
     
     @IBInspectable public var animationDuration: CGFloat = 0.7
     
-    @IBInspectable public var observedProgress: Progress? {
+    public var observedProgress: Progress? {
         didSet {
             oldValue?.removeObserver(self, forKeyPath: keyPathToObservedProgress)
             observedProgress?.addObserver(self, forKeyPath: keyPathToObservedProgress, options: [.new], context: nil)

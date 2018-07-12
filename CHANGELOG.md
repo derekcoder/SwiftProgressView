@@ -2,6 +2,13 @@
 
 -----
 
+## [1.3.0 - Add observedProgress](https://github.com/derekcoder/SwiftProgressView/releases/tag/1.3.0) (2018-7-12)
+
+#### Add
+* Add observedProgress for ProgressView
+
+-----
+
 ## [1.2.2 - Bug Fixes](https://github.com/derekcoder/SwiftProgressView/releases/tag/1.2.2) (2017-12-09)
 
 #### Fix

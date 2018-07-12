@@ -18,8 +18,31 @@ public class ProgressView: UIView {
     
     @IBInspectable public var animationDuration: CGFloat = 0.7
     
+    @IBInspectable public var observedProgress: Progress? {
+        didSet {
+            oldValue?.removeObserver(self, forKeyPath: keyPathToObservedProgress)
+            observedProgress?.addObserver(self, forKeyPath: keyPathToObservedProgress, options: [.new], context: nil)
+        }
+    }
+    
     public func setProgress(_ progress: CGFloat, animated: Bool) {
         fatalError("Need be overrided by subclass")
+    }
+    
+    // MARK: - Observer
+    
+    private let keyPathToObservedProgress = "fractionCompleted"
+    public override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+        guard keyPath == keyPathToObservedProgress else {
+            super.observeValue(forKeyPath: keyPath, of: object, change: change, context: context)
+            return
+        }
+        
+        guard let value = change?[.newKey] as? Double else { return }
+        var progress = CGFloat(value)
+        if progress < 0 { progress = 0 }
+        if progress > 1 { progress = 1 }
+        self.setProgress(progress, animated: true)
     }
     
     // MARK: - Background Layer

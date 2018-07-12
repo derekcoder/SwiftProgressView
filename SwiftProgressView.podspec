@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SwiftProgressView"
-  s.version      = "1.2.2"
+  s.version      = "1.3.0"
   s.summary      = "A set of progress views written in Swift"
 
   s.description  = <<-DESC

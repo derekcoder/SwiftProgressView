@@ -53,6 +53,7 @@ progressView.setProgress(1.0, animated: true)
 * `ProgressRingView` - The class for ring progress view
 * `ProgressViewPieView` - The class for pie progress view
 * `progress` - 0.0 ~ 1.0, readonly. Support IBInspectable
+* `observedProgress` - The progress object to use for updating the progress view 
 * `circleLineWidth` -  The width of outer circle. Support IBInspectable
 * `circleColor` - The color of outer circle. Support IBInspectable
 * `progressColor` - The color of inner circle. Support IBInspectable

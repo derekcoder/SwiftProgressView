@@ -2,7 +2,7 @@
 //  ProgressRingView.swift
 //  Test
 //
-//  Created by Julie on 31/10/17.
+//  Created by Derek on 31/10/17.
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
 

@@ -2,7 +2,7 @@
 //  ProgressView.swift
 //  Test
 //
-//  Created by Julie on 26/10/17.
+//  Created by Derek on 26/10/17.
 //  Copyright © 2017 ZHOU DENGFENG DEREK. All rights reserved.
 //
 

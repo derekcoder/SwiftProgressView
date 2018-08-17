@@ -13,6 +13,22 @@ class PieViewController: UIViewController {
 
     @IBOutlet weak var progressView: ProgressPieView!
     @IBOutlet weak var progressSlider: UISlider!
+    @IBOutlet weak var startOrEndButton: UIButton!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateStartOrEndButton()
+    }
+    
+    func updateStartOrEndButton() {
+        let isOver = progressView.isOver
+        startOrEndButton.setTitle(isOver ? "Start" : "End", for: .normal)
+    }
+    
+    @IBAction func startOrEndProgress(_ sender: UIButton) {
+        progressView.isOver = !progressView.isOver
+        updateStartOrEndButton()
+    }
     
     @IBAction func animate(_ sender: UIButton) {
         var progress: CGFloat = progressView.progress

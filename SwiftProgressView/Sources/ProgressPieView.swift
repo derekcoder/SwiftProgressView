@@ -9,12 +9,6 @@
 import UIKit
 
 public class ProgressPieView: ProgressView {
-    
-    private var displayLink: CADisplayLink?
-    private var animationFromValue: CGFloat = 0
-    private var animationToValue: CGFloat = 0
-    private var animationStartTime: CFTimeInterval = 0
-    
     private var progressLayer: CAShapeLayer!
     
     override public var progressColor: UIColor {
@@ -56,7 +50,8 @@ public class ProgressPieView: ProgressView {
     
     // MARK: - Public
     public override func setProgress(_ progress: CGFloat, animated: Bool) {
-        if self.progress == progress { return }
+        guard !isOver else { return }
+        guard self.progress != progress else { return }
         
         if !animated {
             if displayLink != nil {
@@ -92,9 +87,15 @@ public class ProgressPieView: ProgressView {
     }
     
     // MARK: - Drawing
+    
     override public func draw(_ rect: CGRect) {
         drawBackground()
         drawProgress()
+        
+        progressLayer.opacity = isOver ? 0 : 1
+        if isOver {
+            drawIndicator()
+        }
     }
     
     private func drawProgress() {

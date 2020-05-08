@@ -118,10 +118,10 @@ public class ProgressView: UIView {
         return center
     }
     
-    func textAttributes(withFont font: UIFont, alignment: NSTextAlignment, foregroundColor: UIColor) -> [NSAttributedStringKey: Any] {
+    func textAttributes(withFont font: UIFont, alignment: NSTextAlignment, foregroundColor: UIColor) -> [NSAttributedString.Key: Any] {
         let paragraphStyle = NSParagraphStyle.default.mutableCopy() as! NSMutableParagraphStyle
         paragraphStyle.alignment = alignment
-        let attributes: [NSAttributedStringKey : Any] = [.font: font, .foregroundColor: foregroundColor, .paragraphStyle: paragraphStyle]
+        let attributes: [NSAttributedString.Key : Any] = [.font: font, .foregroundColor: foregroundColor, .paragraphStyle: paragraphStyle]
         return attributes
     }
 }

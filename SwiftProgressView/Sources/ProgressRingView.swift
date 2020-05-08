@@ -20,7 +20,7 @@ public class ProgressRingView: ProgressView {
     
     public var progressLineCapStyle: CGLineCap = .butt {
         didSet {
-            backgroundLayer.lineCap = self.lineCap(from: progressLineCapStyle)
+            backgroundLayer.lineCap = convertToCAShapeLayerLineCap(self.lineCap(from: progressLineCapStyle))
             setNeedsDisplay()
         }
     }
@@ -52,7 +52,7 @@ public class ProgressRingView: ProgressView {
         backgroundLayer = CAShapeLayer()
         backgroundLayer.strokeColor = circleColor.cgColor
         backgroundLayer.fillColor = UIColor.clear.cgColor
-        backgroundLayer.lineCap = kCALineCapRound
+        backgroundLayer.lineCap = CAShapeLayerLineCap.round
         backgroundLayer.lineWidth = circleLineWidth
         layer.addSublayer(backgroundLayer)
         
@@ -60,16 +60,19 @@ public class ProgressRingView: ProgressView {
         progressLayer.fillColor = UIColor.clear.cgColor
         progressLayer.strokeColor = progressColor.cgColor
         progressLayer.backgroundColor = UIColor.clear.cgColor
-        progressLayer.lineCap = self.lineCap(from: progressLineCapStyle)
+        progressLayer.lineCap = convertToCAShapeLayerLineCap(self.lineCap(from: progressLineCapStyle))
         progressLayer.lineWidth = progressLineWidth
         layer.addSublayer(progressLayer)
     }
     
     private func lineCap(from capStyle: CGLineCap) -> String {
         switch capStyle {
-        case .butt: return kCALineCapButt
-        case .round: return kCALineCapRound
-        case .square: return kCALineCapSquare
+        case .butt: return convertFromCAShapeLayerLineCap(CAShapeLayerLineCap.butt)
+        case .round: return convertFromCAShapeLayerLineCap(CAShapeLayerLineCap.round)
+        case .square: return convertFromCAShapeLayerLineCap(CAShapeLayerLineCap.square)
+        @unknown default:
+            print("Unknown line cap used, using square: \(capStyle)")
+            return convertFromCAShapeLayerLineCap(CAShapeLayerLineCap.square)
         }
     }
     
@@ -91,7 +94,7 @@ public class ProgressRingView: ProgressView {
             animationToValue = progress
             if displayLink == nil {
                 displayLink = CADisplayLink(target: self, selector: #selector(self.animationProgress(_:)))
-                displayLink!.add(to: RunLoop.main, forMode: .commonModes)
+                displayLink!.add(to: RunLoop.main, forMode: RunLoop.Mode.common)
             }
         }
     }
@@ -183,4 +186,14 @@ public class ProgressRingView: ProgressView {
                                     height: symbolRect.height)
         symbol.draw(in: symbolDrawRect, withAttributes: symbolAttributes)
     }
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertToCAShapeLayerLineCap(_ input: String) -> CAShapeLayerLineCap {
+	return CAShapeLayerLineCap(rawValue: input)
+}
+
+// Helper function inserted by Swift 4.2 migrator.
+fileprivate func convertFromCAShapeLayerLineCap(_ input: CAShapeLayerLineCap) -> String {
+	return input.rawValue
 }

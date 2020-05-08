@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "SwiftProgressView"
-  s.version      = "1.3.1"
+  s.version      = "1.3.2"
   s.summary      = "A set of progress views written in Swift"
 
   s.description  = <<-DESC
@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '10.0'
 
   s.source_files  = ['SwiftProgressView/Sources/*.swift', 'SwiftProgressView/SwiftProgressView.h']
-  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.0' }
+  s.pod_target_xcconfig = { 'SWIFT_VERSION' => '5.0' }
 
 end

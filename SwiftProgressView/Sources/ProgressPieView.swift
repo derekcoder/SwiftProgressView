@@ -37,7 +37,7 @@ public class ProgressPieView: ProgressView {
         backgroundLayer = CAShapeLayer()
         backgroundLayer.strokeColor = circleColor.cgColor
         backgroundLayer.fillColor = UIColor.clear.cgColor
-        backgroundLayer.lineCap = kCALineCapRound
+        backgroundLayer.lineCap = CAShapeLayerLineCap.round
         backgroundLayer.lineWidth = circleLineWidth
         layer.addSublayer(backgroundLayer)
         
@@ -66,7 +66,7 @@ public class ProgressPieView: ProgressView {
             animationToValue = progress
             if displayLink == nil {
                 displayLink = CADisplayLink(target: self, selector: #selector(self.animationProgress(_:)))
-                displayLink!.add(to: RunLoop.main, forMode: .commonModes)
+                displayLink!.add(to: RunLoop.main, forMode: RunLoop.Mode.common)
             }
         }
     }
